@@ -14,6 +14,7 @@ mongoose.connect("mongodb+srv://compdev3038_db_user:cU3besLHYKyZX37B@cluster0.9f
 // ✅ Routes
 const productRoutes = require("./routes/productRoutes");
 app.use("/api/products", productRoutes);
+app.use("/products", productRoutes); // Also allow /products for easier access
 
 // ✅ Test route
 app.get("/", (req, res) => {
